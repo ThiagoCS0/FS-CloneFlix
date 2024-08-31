@@ -5,14 +5,16 @@ import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router
 import './Index.css'
 import Inicio from './pages/Inicio.jsx'
 
-const rota  = createBrowserRouter([
-{path:'/', element:<App/>, children:[
-  {path:'/', element:<Inicio/>}
-]}
+const rota = createBrowserRouter([
+  {
+    path: '/', element: <App />, children: [
+      { path: '/FS-CloneFlix/', element: <App /> }
+    ]
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={rota}/>
+    <RouterProvider router={rota} />
   </React.StrictMode>
 )
