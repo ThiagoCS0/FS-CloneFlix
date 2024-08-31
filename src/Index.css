@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	transition: all 0.4s;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	font-family: "Noto Sans", sans-serif;
+}
+
+body {
+	color: #CCC;
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(#0007, #0007), url('./imgs/nf.jpg');
+}
+
+a {
+	color: #DDD;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #BBB;
+	text-decoration: underline;
+}
+
+#cabecalho {
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 50px;
+	overflow: hidden;
+	padding: 7px 20px;
+	position: absolute;
+}
+
+#cabecalho img {
+	height: 100%;
+	filter: contrast(150%);
+}
+
+#acesso {
+	gap: 10px;
+	width: 70vw;
+	height: 80vh;
+	display: flex;
+	text-align: center;
+	border-radius: 5px;
+	padding: 40px 50px 80px;
+	flex-direction: column;
+	background-color: #000D;
+}
+
+#acesso form {
+	gap: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+#acesso h1 {
+	color: #FFF;
+	padding: 5px 0;
+	text-align: left;
+	font-size: xx-large;
+}
+
+#acesso input {
+	outline: none;
+	padding: 20px;
+	color: #FFF;
+	font-size: medium;
+	border-radius: 5px;
+	background-color: #0007;
+	border: 1px solid #777;
+}
+
+#bEntrar {
+	background-color: #D10 !important;
+}
+
+#bEntrar:hover {
+	background-color: #B00 !important;
+}
+
+#acesso button {
+	height: 40px;
+	padding: 10px;
+	color: #FFF;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 5px;
+	background-color: #5558;
+}
+
+#acesso button:hover {
+	background-color: #4448;
+}
+
+.checador {
+	width: 20px;
+	height: 20px;
+	border-radius: 2px;
+	border: 1px solid #777;
+	background-color: #000;
+}
+
+.checador:after {
+	content: '';
+	display: none;
+	position: absolute;
+}
+
+#acesso label {
+	gap: 10px;
+	display: flex;
+	cursor: pointer;
+	justify-content: start;
+}
+
+#acesso label input {
+	opacity: 0;
+}
+
+#acesso input:checked~.checador {
+	background-color: #DDD;
+}
+
+#acesso input:checked~.checador:after {
+	display: block;
+}
+
+#acesso label:hover input~.checador {
+	border: 1px solid #DDD;
+}
+
+#acesso label .checador:after {
+	top: 2px;
+	left: 6px;
+	width: 4px;
+	height: 10px;
+	position: relative;
+	border: solid #000;
+	transform: rotate(45deg);
+	border-width: 0 2px 2px 0;
+}
+
+#acesso div {
+	display: flex;
+}
+
+#iLembrar {
+	outline: none;
+	color: #F0F;
+}
+
+.links {
+	color: #FFF;
+	font-weight: 400;
+}
+
+.pAviso {
+	display: flex;
+	color: #F55;
+	font-size: small;
+	text-align: left;
+	align-items: center;
+	flex-direction: row;
+}
+
+#pCap {
+	font-size: small;
+	text-align: left;
+	margin-top: 10px;
+}
+
+#pCap a {
+	color: #07F;
+}
+
+svg {
+	margin-right: 5px;
+}
