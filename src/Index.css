@@ -363,6 +363,7 @@ section {
 	}
 
 	#rodape {
+		position: relative;
 		border-top: 1px solid #555;
 	}
 }
