@@ -13,9 +13,12 @@
 	font-family: "Noto Sans", sans-serif;
 }
 
+html {
+	width: 100vw;
+	height: 100vh;
+}
 
 body {
-	width: 100vw;
 	color: #CCC;
 	display: flex;
 	min-height: 100vh;
@@ -231,6 +234,7 @@ section {
 	color: #BBB;
 	display: flex;
 	padding: 40px;
+	position: absolute;
 	height: fit-content;
 	justify-content: center;
 	background: linear-gradient(#0007 0%, #000 20%);
