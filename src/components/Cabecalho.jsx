@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from '../imgs/cloneflix.png'
-export default function Header({ defNumero }) {
+import logo from '/cloneflix.png'
+export default function Cabecalho() {
 
 	return (
 		<>

@@ -13,13 +13,13 @@
 	font-family: "Noto Sans", sans-serif;
 }
 
+
 body {
+	width: 100vw;
 	color: #CCC;
 	display: flex;
 	min-height: 100vh;
-	align-items: center;
-	justify-content: center;
-	background-image: linear-gradient(#0007, #0007), url('./imgs/nf.jpg');
+	background: #000;
 }
 
 a {
@@ -32,14 +32,33 @@ a:hover {
 	text-decoration: underline;
 }
 
-#cabecalho {
+section {
+	height: 100%;
+}
+
+#imgFundo {
 	top: 0;
 	left: 0;
+	z-index: -10;
 	width: 100vw;
-	height: 50px;
+	height: 100%;
 	overflow: hidden;
-	padding: 7px 20px;
 	position: absolute;
+	background-color: #000;
+}
+
+#imgFundo img {
+	opacity: 0.4;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+#cabecalho {
+	width: 100vw;
+	height: 60px;
+	padding: 10px;
+	overflow: hidden;
+	z-index: 2;
 }
 
 #cabecalho img {
@@ -49,16 +68,24 @@ a:hover {
 
 #acesso {
 	gap: 10px;
-	width: 70vw;
-	height: 80vh;
-	min-width: 300px;
-	max-width: 500px;
+	z-index: 1;
+	width: 450px;
 	display: flex;
 	text-align: center;
 	border-radius: 5px;
-	padding: 40px 50px 80px;
+	padding: 48px 68px;
+	height: fit-content;
 	flex-direction: column;
-	background-color: #000D;
+	background-color: #0009;
+}
+
+#dAcesso {
+	height: 100%;
+	width: 100vw;
+	display: flex;
+	padding: 0 0 40px;
+	align-items: center;
+	justify-content: center;
 }
 
 #acesso form {
@@ -75,13 +102,22 @@ a:hover {
 }
 
 #acesso input {
+	color: #FFF;
 	outline: none;
 	padding: 20px;
-	color: #FFF;
 	font-size: medium;
 	border-radius: 5px;
-	background-color: #0007;
 	border: 1px solid #777;
+	background-color: #0007;
+}
+
+#dAcessoInferior {
+	gap: 20px;
+	flex-direction: column;
+}
+
+#dAcessoInferior p {
+	text-align: left !important;
 }
 
 #bEntrar {
@@ -93,12 +129,13 @@ a:hover {
 }
 
 #acesso button {
-	height: 40px;
-	padding: 10px;
 	color: #FFF;
+	padding: 10px;
 	cursor: pointer;
+	min-height: 40px;
 	font-weight: bold;
 	border-radius: 5px;
+	height: fit-content;
 	background-color: #5558;
 }
 
@@ -159,8 +196,7 @@ a:hover {
 }
 
 #iLembrar {
-	outline: none;
-	color: #F0F;
+	display: none;
 }
 
 .links {
@@ -169,24 +205,160 @@ a:hover {
 }
 
 .pAviso {
-	display: flex;
 	color: #F55;
+	display: flex;
 	font-size: small;
 	text-align: left;
 	align-items: center;
 	flex-direction: row;
 }
 
-#pCap {
+.pCap {
+	color: #888;
 	font-size: small;
 	text-align: left;
 	margin-top: 10px;
 }
 
-#pCap a {
+.pCap a {
 	color: #07F;
 }
 
-svg {
-	margin-right: 5px;
+#rodape {
+	bottom: 0;
+	z-index: -1;
+	width: 100%;
+	color: #BBB;
+	display: flex;
+	padding: 40px;
+	height: fit-content;
+	justify-content: center;
+	background: linear-gradient(#0007 0%, #000 20%);
+}
+
+#rodape li {
+	flex: 0 0 50%;
+}
+
+#rodape div {
+	margin: 20px 0;
+	line-height: 25px;
+}
+
+#rodape ul {
+	width: 100%;
+	flex-wrap: wrap;
+	display: inline-flex;
+}
+
+#lTel {
+	text-decoration: none !important;
+}
+
+#rodape a {
+	color: #BBB;
+	text-decoration: underline;
+}
+
+#rodape li {
+	width: 50%;
+	padding: 10px;
+	list-style: none;
+}
+
+#lingua {
+	width: 170px;
+	height: 40px;
+	padding: 4px;
+	display: flex;
+	border-radius: 5px;
+	align-items: center;
+	justify-content: center;
+	background-color: #000;
+	border: 1px solid #555 !important;
+}
+
+#lingua div {
+	border: 0;
+}
+
+#lingua img {
+	z-index: 1;
+	right: auto;
+	height: 25px;
+	filter: invert(1);
+}
+
+#lingua select {
+	color: #FFF;
+	outline: none;
+	padding: 0 8px;
+	cursor: pointer;
+	font-size: medium;
+	width: fit-content;
+	background-color: #000;
+}
+
+@media only screen and (max-width:600px) {
+	body {
+		height: fit-content;
+		background: #000;
+	}
+
+	#cabecalho {
+		top: 0;
+		left: 0;
+		z-index: 3;
+		height: 70px;
+		position: absolute;
+		padding: 20px 15px 15px;
+	}
+
+	#dAcesso {
+		padding: 0;
+	}
+
+	#acesso {
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		border-radius: 0;
+		background: #000;
+		height: fit-content;
+		border-top: 1px solid #555;
+	}
+
+	#dAcesso {
+		height: fit-content;
+	}
+
+	#pCap2 {
+		display: none;
+	}
+
+	#acesso h1 {
+		padding: 15px 0;
+	}
+
+	#acesso input {
+		padding: 19px;
+	}
+
+	#acesso button {
+		padding: 14px;
+	}
+
+	#acesso p {
+		text-align: center;
+	}
+
+	#acesso label {
+		align-items: center;
+		justify-content: left;
+	}
+
+	#rodape {
+		border-top: 1px solid #555;
+	}
 }
